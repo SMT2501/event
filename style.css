@@ -1,3 +1,34 @@
+/* For larger screens */
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section {
+        flex-basis: calc(50% - 20px); /* Adjust width for two columns with gap */
+    }
+}
+
+/* For smaller screens */
+@media screen and (max-width: 767px) {
+    main {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    section {
+        width: 100%; /* Take full width on smaller screens */
+    }
+}
+
+/* Adjustments for checkout button */
+#checkout-btn {
+    display: block; /* Ensure button takes full width */
+    margin-top: 20px; /* Add spacing above the button */
+}
+
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
