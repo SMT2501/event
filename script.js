@@ -47,7 +47,7 @@ function checkout() {
         for (let i = 0; i < item.quantity; i++) {
             const barcodeId = `barcode-${index}-${i}`;
             const barcodeCanvas = document.createElement('canvas');
-            const barcodeText = 'Ghost Nation Festival'; // Text to encode into the barcode
+            const barcodeText = 'Ghost Nation Festival General Ticket'; // Text to encode into the barcode
             JsBarcode(barcodeCanvas, barcodeText, { format: "CODE128", displayValue: false });
 
             // Add the barcode to the PDF
@@ -59,7 +59,7 @@ function checkout() {
             pdf.addImage(imageData, 'JPEG', barcodeX, barcodeY, barcodeWidth, barcodeHeight);
 
             // Add label for the barcode number
-            pdf.text(`Barcode ${i + 1}`, barcodeX + barcodeWidth + 10, barcodeY + 10);
+            pdf.text(`Ticket ${i + 1}`, barcodeX + barcodeWidth + 10, barcodeY + 10);
         }
     });
 

@@ -1,45 +1,13 @@
-/* For larger screens */
-@media screen and (min-width: 768px) {
-    main {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    section {
-        flex-basis: calc(50% - 20px); /* Adjust width for two columns with gap */
-    }
-}
-
-/* For smaller screens */
-@media screen and (max-width: 767px) {
-    main {
-        flex-direction: column; /* Stack sections vertically on smaller screens */
-    }
-
-    section {
-        width: 100%; /* Take full width on smaller screens */
-    }
-}
-
-/* Adjustments for checkout button */
-#checkout-btn {
-    display: block; /* Ensure button takes full width */
-    margin-top: 20px; /* Add spacing above the button */
-}
-
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    align-items: center;
-    
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -49,7 +17,7 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -61,7 +29,7 @@ header {
 
 .nav-links li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .nav-links li a {
@@ -70,57 +38,44 @@ header {
 }
 
 main {
-    padding: 20px;
-    display: flex;
-    
-    flex-wrap: wrap; /* Wrap sections to a new line if needed */
-    gap: 20px; /* Add space between sections */
+    padding: 10px;
 }
 
 section {
-    flex: 1;
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 h2 {
     color: #333;
+    font-size: 1.2rem;
+    margin-top: 0;
 }
 
 .ticket {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .ticket-image {
-    width: 150px;
-    margin-right: 20px;
-    border-radius: 5px;
+    width: 100px;
+    margin-right: 10px;
 }
-
 
 .ticket-details {
     flex: 1;
-    margin-right: 20px; /* Add margin to create space between ticket details and quantity input */
-}
-
-.quantity-container label {
-    margin-right: 5px; /* Add margin to create space between label and input */
-}
-
-
-.label {
-    margin-right: 5px; /* Add margin to create space between label and input */
 }
 
 .ticket h3 {
     color: #007bff;
     margin-top: 0;
+    font-size: 1.1rem;
 }
 
 .price {
@@ -128,29 +83,30 @@ h2 {
     font-weight: bold;
 }
 
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-container label {
+    margin-right: 5px;
+}
+
 .buy-btn {
+    padding: 5px 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
 .buy-btn:hover {
     background-color: #0056b3;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
 #checkout-btn {
-    background-color: #28a745;
+    background-color: #28a745; /* Updated color */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -160,6 +116,14 @@ footer {
 }
 
 #checkout-btn:hover {
-    background-color: #218838;
+    background-color: #218838; /* Updated color */
 }
 
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8rem;
+}
