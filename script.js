@@ -1,13 +1,16 @@
 let cartItems = [];
 let totalPrice = 0;
 
-function buyTicket(name, price) {
-    const quantity = parseInt(document.getElementById('quantity').value);
+
+function buyTicket(name, price, isVip) {
+    const quantityInputId = isVip ? 'vip-quantity' : 'quantity'; // Determine which quantity input to use
+    const quantity = parseInt(document.getElementById(quantityInputId).value);
     const totalCost = price * quantity;
     cartItems.push({ name, price, quantity, totalCost });
     totalPrice += totalCost;
     updateCart();
 }
+
 
 function updateCart() {
     const cartList = document.getElementById('cart-items');
