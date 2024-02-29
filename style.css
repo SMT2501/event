@@ -28,11 +28,12 @@
 }
 
 
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    align-items: center;
+    
 }
 
 header {
@@ -43,7 +44,6 @@ header {
 }
 
 .container {
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -72,6 +72,7 @@ header {
 main {
     padding: 20px;
     display: flex;
+    
     flex-wrap: wrap; /* Wrap sections to a new line if needed */
     gap: 20px; /* Add space between sections */
 }
@@ -102,8 +103,19 @@ h2 {
     border-radius: 5px;
 }
 
+
 .ticket-details {
     flex: 1;
+    margin-right: 20px; /* Add margin to create space between ticket details and quantity input */
+}
+
+.quantity-container label {
+    margin-right: 5px; /* Add margin to create space between label and input */
+}
+
+
+.label {
+    margin-right: 5px; /* Add margin to create space between label and input */
 }
 
 .ticket h3 {
